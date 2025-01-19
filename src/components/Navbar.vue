@@ -7,7 +7,7 @@
     </ul>
 
     <!-- Logo -->
-    <img src="../assets/logo.png" alt="LogoPrincipal" class="logo" />
+    <img src="../assets/logo.png" alt="LogoPrincipal" class="logo" @click="handleLogoClick" />
 
     <!-- Right Menu -->
     <ul class="menu">
@@ -62,9 +62,16 @@ export default {
       isSidebarOpen.value = !isSidebarOpen.value;
     };
 
+    const handleLogoClick = () => {
+      if (window.innerWidth <= 768) {
+        toggleSidebar();
+      }
+    };
+
     return {
       isSidebarOpen,
       toggleSidebar,
+      handleLogoClick,
     };
   },
 };
@@ -92,6 +99,7 @@ export default {
   align-items: center;
   height: 50px;
   margin-right: 4rem;
+  cursor: pointer;
 }
 
 /* Menu */
@@ -213,5 +221,4 @@ export default {
     display: block;
   }
 }
-
 </style>
