@@ -24,9 +24,9 @@ export default {
   created() {
     // Precargar imágenes al cargar la aplicación
     this.preloadImages([
-      require("./assets/Nosotros.jpg"), // Cambia por las rutas de tus imágenes
-      require("./assets/Contactanos.jpg"),
-      require("./assets/Catalogo.jpg"),
+      "/Nosotros.jpg", // Usa rutas relativas al directorio `public`
+      "/Contactanos.jpg",
+      "/Catalogo.jpg",
     ]);
   },
   methods: {
@@ -34,7 +34,7 @@ export default {
     preloadImages(imageArray) {
       imageArray.forEach((image) => {
         const img = new Image();
-        img.src = image;
+        img.src = image; // Asigna la ruta completa
       });
     },
   },
