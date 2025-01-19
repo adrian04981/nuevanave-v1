@@ -26,24 +26,24 @@
         <button class="sidebar-close" @click="toggleSidebar">✖</button>
         <ul class="sidebar-menu">
           <li class="sidebar-item">
-        <router-link to="/" @click="toggleSidebar" class="sidebar-link">
-          <i class="sidebar-icon">🏠</i> INICIO
-        </router-link>
+            <router-link to="/" @click="toggleSidebar" class="sidebar-link">
+              <i class="sidebar-icon">🏠</i> INICIO
+            </router-link>
           </li>
           <li class="sidebar-item">
-        <router-link to="/catalogo" @click="toggleSidebar" class="sidebar-link">
-          <i class="sidebar-icon">📦</i> CATÁLOGO
-        </router-link>
+            <router-link to="/catalogo" @click="toggleSidebar" class="sidebar-link">
+              <i class="sidebar-icon">📦</i> CATÁLOGO
+            </router-link>
           </li>
           <li class="sidebar-item">
-        <router-link to="/nosotros" @click="toggleSidebar" class="sidebar-link">
-          <i class="sidebar-icon">👥</i> NOSOTROS
-        </router-link>
+            <router-link to="/nosotros" @click="toggleSidebar" class="sidebar-link">
+              <i class="sidebar-icon">👥</i> NOSOTROS
+            </router-link>
           </li>
           <li class="sidebar-item">
-        <router-link to="/contactanos" @click="toggleSidebar" class="sidebar-link">
-          <i class="sidebar-icon">📞</i> CONTÁCTANOS
-        </router-link>
+            <router-link to="/contactanos" @click="toggleSidebar" class="sidebar-link">
+              <i class="sidebar-icon">📞</i> CONTÁCTANOS
+            </router-link>
           </li>
         </ul>
       </div>
@@ -70,7 +70,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 /* Navbar */
 .navbar {
   display: flex;
@@ -90,8 +90,7 @@ export default {
 .logo {
   display: flex;
   align-items: center;
-  height: 50px; /* Ajusta el tamaño según tus necesidades */
-/* Ajusta el tamaño según tus necesidades */
+  height: 50px;
   margin-right: 4rem;
 }
 
@@ -126,7 +125,7 @@ export default {
   cursor: pointer;
 }
 
-/* Sidebar */
+/* Sidebar Overlay */
 .sidebar-overlay {
   position: fixed;
   top: 0;
@@ -138,67 +137,69 @@ export default {
   transition: opacity 0.3s ease-in-out;
 }
 
+/* Sidebar */
 .sidebar {
   background: #2c3e50;
-  width: 300px;
+  width: 280px;
   height: 100%;
-  padding: 2rem 1.5rem;
+  padding: 1.5rem;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 20;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+  align-items: flex-start;
+  justify-content: flex-start;
   transition: transform 0.3s ease-in-out;
   box-shadow: 2px 0 8px rgba(0, 0, 0, 0.3);
 }
 
-.sidebar .close {
+.sidebar-close {
   align-self: flex-end;
   background: none;
   border: none;
-  font-size: 1.5rem;
+  font-size: 24px;
   cursor: pointer;
   color: white;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
 }
 
-.sidebar .menu {
+.sidebar-close:hover {
+  transform: scale(1.1);
+}
+
+/* Sidebar Menu */
+.sidebar-menu {
   list-style: none;
-  padding: 0;
   width: 100%;
-  margin-top: 2rem;
+  padding: 0;
 }
 
-.sidebar .menu li {
-  margin: 1rem 0;
-  text-align: center;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 0.5rem 0;
+.sidebar-item {
+  margin: 0.5rem 0;
 }
 
-.sidebar .menu li:last-child {
-  border-bottom: none;
-}
-
-.sidebar .menu a {
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 1rem;
   text-decoration: none;
   color: white;
   font-weight: bold;
   font-size: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: color 0.3s ease;
+  border-radius: 8px;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-.sidebar .menu a:hover {
-  color: #1abc9c;
+.sidebar-link:hover {
+  background-color: #1abc9c;
+  color: white;
 }
 
-.sidebar .icon {
-  margin-right: 0.5rem;
+.sidebar-icon {
+  margin-right: 0.8rem;
   font-size: 20px;
 }
 
@@ -212,4 +213,5 @@ export default {
     display: block;
   }
 }
+
 </style>
