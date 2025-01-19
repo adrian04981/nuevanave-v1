@@ -14,12 +14,11 @@
   background-image: url('../assets/Nosotros.jpg');
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  height: 97.5%;
   color: white;
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
   z-index: -1;
   display: flex;
   flex-direction: column;

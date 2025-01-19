@@ -23,27 +23,27 @@
     <!-- Sidebar -->
     <div v-if="isSidebarOpen" class="sidebar-overlay" @click="toggleSidebar">
       <div class="sidebar" @click.stop>
-        <button class="close" @click="toggleSidebar">✖</button>
-        <ul class="menu">
-          <li>
-            <router-link to="/" @click="toggleSidebar">
-              <i class="icon">🏠</i> INICIO
-            </router-link>
+        <button class="sidebar-close" @click="toggleSidebar">✖</button>
+        <ul class="sidebar-menu">
+          <li class="sidebar-item">
+        <router-link to="/" @click="toggleSidebar" class="sidebar-link">
+          <i class="sidebar-icon">🏠</i> INICIO
+        </router-link>
           </li>
-          <li>
-            <router-link to="/catalogo" @click="toggleSidebar">
-              <i class="icon">📦</i> CATÁLOGO
-            </router-link>
+          <li class="sidebar-item">
+        <router-link to="/catalogo" @click="toggleSidebar" class="sidebar-link">
+          <i class="sidebar-icon">📦</i> CATÁLOGO
+        </router-link>
           </li>
-          <li>
-            <router-link to="/nosotros" @click="toggleSidebar">
-              <i class="icon">👥</i> NOSOTROS
-            </router-link>
+          <li class="sidebar-item">
+        <router-link to="/nosotros" @click="toggleSidebar" class="sidebar-link">
+          <i class="sidebar-icon">👥</i> NOSOTROS
+        </router-link>
           </li>
-          <li>
-            <router-link to="/contactanos" @click="toggleSidebar">
-              <i class="icon">📞</i> CONTÁCTANOS
-            </router-link>
+          <li class="sidebar-item">
+        <router-link to="/contactanos" @click="toggleSidebar" class="sidebar-link">
+          <i class="sidebar-icon">📞</i> CONTÁCTANOS
+        </router-link>
           </li>
         </ul>
       </div>
