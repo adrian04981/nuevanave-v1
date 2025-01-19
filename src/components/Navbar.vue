@@ -7,7 +7,7 @@
     </ul>
 
     <!-- Logo -->
-    <h1 class="logo">LOGO</h1>
+    <img src="../assets/logo.png" alt="LogoPrincipal" class="logo" />
 
     <!-- Right Menu -->
     <ul class="menu">
@@ -78,7 +78,7 @@ export default {
   align-items: center;
   background-color: rgba(99, 99, 99, 0.47);
   color: white;
-  padding: 0.5rem 15%;
+  padding: 0.5rem 20%;
   font-family: "Open Sans", sans-serif;
   font-weight: bold;
   font-size: 21px;
@@ -88,11 +88,11 @@ export default {
 
 /* Logo */
 .logo {
-  font-size: 21px;
-  text-align: center;
-  color: white;
-  flex: 1;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  height: 50px; /* Ajusta el tamaño según tus necesidades */
+/* Ajusta el tamaño según tus necesidades */
+  margin-right: 4rem;
 }
 
 /* Menu */
