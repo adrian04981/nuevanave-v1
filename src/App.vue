@@ -21,6 +21,23 @@ export default {
   components: {
     Navbar,
   },
+  created() {
+    // Precargar imágenes al cargar la aplicación
+    this.preloadImages([
+      require("./assets/Nosotros.jpg"), // Cambia por las rutas de tus imágenes
+      require("./assets/Contactanos.jpg"),
+      require("./assets/Catalogo.jpg"),
+    ]);
+  },
+  methods: {
+    // Método para precargar imágenes
+    preloadImages(imageArray) {
+      imageArray.forEach((image) => {
+        const img = new Image();
+        img.src = image;
+      });
+    },
+  },
 };
 </script>
 
