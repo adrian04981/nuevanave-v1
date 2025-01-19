@@ -220,5 +220,8 @@ export default {
   .hamburger {
     display: block;
   }
+  .logo{
+    margin-right: 0rem;
+  }
 }
 </style>
