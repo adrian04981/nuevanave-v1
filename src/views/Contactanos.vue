@@ -6,7 +6,7 @@
 
 <style scoped>
 .root {
-  background-image: url('../assets/Contactanos.png');
+  background-image: url('../assets//Contactanos.jpg');
   background-size: cover;
   background-position: center;
   height: 100vh; /* Ajusta la altura según tus necesidades */

@@ -11,7 +11,7 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400&display=swap');
 
 .root {
-  background-image: url('../assets/Inicio.png');
+  background-image: url('../assets/Inicio.jpg');
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -25,12 +25,42 @@
 
 .text {
   font-family: 'League Spartan', sans-serif;
-  font-size: 42.8px;
+  font-size: 80px;
   font-weight: bold;
   color: white;
   position: absolute;
-  left: 1rem;
-  top: 80%; /* Adjusted from 50% to 60% to move it a bit lower */
+  left: 5rem;
+  top: 80%;
   transform: translateY(-50%);
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1200px) {
+  .text {
+    font-size: 60px;
+    left: 4rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .text {
+    font-size: 60px;
+    left: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .text {
+    font-size: 60px;
+    left: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .text {
+    font-size: 60px;
+    left: 1rem;
+    top: 70%;
+  }
 }
 </style>

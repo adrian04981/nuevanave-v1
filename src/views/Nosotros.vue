@@ -11,7 +11,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
 
 .root {
-  background-image: url('../assets/Nosotros.png');
+  background-image: url('../assets/Nosotros.jpg');
   background-size: cover;
   background-position: center;
   height: 100vh;
