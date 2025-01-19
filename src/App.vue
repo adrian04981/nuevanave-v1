@@ -2,7 +2,14 @@
   <div>
     <Navbar />
     <main>
-      <router-view />
+      <!-- Transición para las rutas -->
+      <transition
+        enter-active-class="animate__animated animate__fadeIn"
+        leave-active-class="animate__animated animate__fadeOut"
+        mode="out-in"
+      >
+        <router-view />
+      </transition>
     </main>
   </div>
 </template>
@@ -17,8 +24,7 @@ export default {
 };
 </script>
 
-<style>
-/* Global styles */
+<style scoped>
 body {
   font-family: Arial, sans-serif;
   margin: 0;

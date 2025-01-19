@@ -7,6 +7,7 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { faInstagram, faTiktok } from "@fortawesome/free-brands-svg-icons"; // Íconos de marcas
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons"; // Ícono de correo electrónico
+import "animate.css";
 
 // Agregar íconos a la librería
 library.add(faInstagram, faTiktok, faEnvelope);
