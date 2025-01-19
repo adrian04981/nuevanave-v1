@@ -24,10 +24,28 @@
     <div v-if="isSidebarOpen" class="sidebar-overlay" @click="toggleSidebar">
       <div class="sidebar" @click.stop>
         <button class="close" @click="toggleSidebar">✖</button>
-        <li><router-link to="/" @click="toggleSidebar">INICIO</router-link></li>
-          <li><router-link to="/catalogo" @click="toggleSidebar">CATÁLOGO</router-link></li>
-          <li><router-link to="/nosotros" @click="toggleSidebar">NOSOTROS</router-link></li>
-          <li><router-link to="/contactanos" @click="toggleSidebar">CONTÁCTANOS</router-link></li>
+        <ul class="menu">
+          <li>
+            <router-link to="/" @click="toggleSidebar">
+              <i class="icon">🏠</i> INICIO
+            </router-link>
+          </li>
+          <li>
+            <router-link to="/catalogo" @click="toggleSidebar">
+              <i class="icon">📦</i> CATÁLOGO
+            </router-link>
+          </li>
+          <li>
+            <router-link to="/nosotros" @click="toggleSidebar">
+              <i class="icon">👥</i> NOSOTROS
+            </router-link>
+          </li>
+          <li>
+            <router-link to="/contactanos" @click="toggleSidebar">
+              <i class="icon">📞</i> CONTÁCTANOS
+            </router-link>
+          </li>
+        </ul>
       </div>
     </div>
   </nav>
@@ -121,18 +139,20 @@ export default {
 }
 
 .sidebar {
-  background: #636363;
-  width: 250px;
+  background: #2c3e50;
+  width: 300px;
   height: 100%;
-  padding: 1rem;
+  padding: 2rem 1.5rem;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 20;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   transition: transform 0.3s ease-in-out;
-  transform: translateX(0); /* Default visible */
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.3);
 }
 
 .sidebar .close {
@@ -147,23 +167,39 @@ export default {
 .sidebar .menu {
   list-style: none;
   padding: 0;
+  width: 100%;
   margin-top: 2rem;
 }
 
 .sidebar .menu li {
   margin: 1rem 0;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.5rem 0;
+}
+
+.sidebar .menu li:last-child {
+  border-bottom: none;
 }
 
 .sidebar .menu a {
   text-decoration: none;
   color: white;
   font-weight: bold;
-  font-size: 21px;
-  transition: color 0.3s;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease;
 }
 
 .sidebar .menu a:hover {
-  color: #cccccc;
+  color: #1abc9c;
+}
+
+.sidebar .icon {
+  margin-right: 0.5rem;
+  font-size: 20px;
 }
 
 /* Responsive Design */
@@ -174,16 +210,6 @@ export default {
 
   .hamburger {
     display: block;
-  }
-}
-
-@media (max-width: 1024px) {
-  .menu {
-    gap: 1.5rem;
-  }
-
-  .navbar {
-    padding: 1rem 3%;
   }
 }
 </style>
